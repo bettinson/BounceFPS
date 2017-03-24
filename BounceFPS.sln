@@ -1,14 +1,30 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-
+Project("{8953227A-21F2-6034-C4D3-D211AAECA5DE}") = "BounceFPS", "Assembly-CSharp-firstpass.csproj", "{C198EB1A-BF64-F7E4-A1C2-9EE750329196}"
+EndProject
+Project("{8953227A-21F2-6034-C4D3-D211AAECA5DE}") = "BounceFPS", "Assembly-CSharp.csproj", "{D1223F0D-93C0-E571-14BB-A3AB7F57CE34}"
+EndProject
+Project("{8953227A-21F2-6034-C4D3-D211AAECA5DE}") = "BounceFPS", "Assembly-CSharp-Editor-firstpass.csproj", "{CEF1BEC8-18A5-BB00-EDA0-E0E5FCEE2F52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{C198EB1A-BF64-F7E4-A1C2-9EE750329196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C198EB1A-BF64-F7E4-A1C2-9EE750329196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C198EB1A-BF64-F7E4-A1C2-9EE750329196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C198EB1A-BF64-F7E4-A1C2-9EE750329196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1223F0D-93C0-E571-14BB-A3AB7F57CE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1223F0D-93C0-E571-14BB-A3AB7F57CE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1223F0D-93C0-E571-14BB-A3AB7F57CE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1223F0D-93C0-E571-14BB-A3AB7F57CE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF1BEC8-18A5-BB00-EDA0-E0E5FCEE2F52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF1BEC8-18A5-BB00-EDA0-E0E5FCEE2F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF1BEC8-18A5-BB00-EDA0-E0E5FCEE2F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF1BEC8-18A5-BB00-EDA0-E0E5FCEE2F52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
