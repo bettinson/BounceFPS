@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RocketController.cs" />
      <Compile Include="Assets\Scripts\BounceOnFloorCollision.cs" />
      <Compile Include="Assets\Scripts\BouncePlayer.cs" />
      <Compile Include="Assets\Scripts\EnemyAI.cs" />

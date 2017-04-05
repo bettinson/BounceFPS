@@ -1,11 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Movement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RocketController.cs">
     <Files>
-      <File FileName="Assets/BouncePlayer.cs" Line="21" Column="1" />
-      <File FileName="Assets/BounceOnFloorCollision.cs" Line="1" Column="1" />
-      <File FileName="Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" Line="294" Column="4" />
-      <File FileName="Assets/Movement.cs" Line="19" Column="45" />
+      <File FileName="Assets/Scripts/RocketFire.cs" Line="10" Column="43" />
+      <File FileName="Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" Line="1" Column="1" />
+      <File FileName="Assets/RocketController.cs" Line="18" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

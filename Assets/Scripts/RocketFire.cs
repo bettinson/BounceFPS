@@ -3,36 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RocketFire : MonoBehaviour {
-	float rocketSpeed = 15;
+	float rocketSpeed = 25;
+	float bulletSpeed = 70;
 	public GameObject rocketPrefab;
 	public Transform rocketSpawn;
+	private Vector3 rotation = new Vector3(90,0,0);
 
 	// Use this for initialization
 	void Start () {
-		
+		rocketPrefab.gameObject.transform.Rotate (rotation);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-//		var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-//		var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
-//
-//		transform.Rotate(0, x, 0);
-//		transform.Translate(0, 0, z);
-
 		if (Input.GetButtonDown ("Fire1")) {
 			AudioSource gunSound = GetComponent<AudioSource>();
+
 			gunSound.Play ();
-			Fire();
+			FireRocket();
 			GetComponent<Animation>().Play ("RocketShot");
 
 
 			// Add force to the cloned object in the object's forward direction
 //			clone.rigidBody.AddForceAt(clone.transform.forward * 1000);
 		}
+
+		if (Input.GetButtonDown ("Fire2")) {
+			AudioSource gunSound = GetComponent<AudioSource>();
+			gunSound.Play ();
+			FireBullet();
+			GetComponent<Animation>().Play ("RocketShot");
+		}
 	}
 
-	void Fire()
+	void FireRocket()
 	{
 		// Create the Bullet from the Bullet Prefab
 		var rocket = (GameObject)Instantiate(
@@ -45,5 +49,20 @@ public class RocketFire : MonoBehaviour {
 
 		// Destroy the bullet after 2 seconds
 		Destroy(rocket, 30.0f);        
+	}
+
+	void FireBullet()
+	{
+		// Create the Bullet from the Bullet Prefab
+		var rocket = (GameObject)Instantiate(
+			rocketPrefab,
+			rocketSpawn.position,
+			rocketSpawn.rotation);
+
+		// Add velocity to the bullet
+		rocket.GetComponent<Rigidbody>().velocity = rocket.transform.forward * bulletSpeed;
+
+		// Destroy the bullet after 2 seconds
+		Destroy(rocket, 30.0f); 
 	}
 }
