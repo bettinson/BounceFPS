@@ -19,3 +19,5 @@
 /Users/mattbettinson/BounceFPS/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/mattbettinson/BounceFPS/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/mattbettinson/BounceFPS/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/mattbettinson/BounceFPS/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/mattbettinson/BounceFPS/Temp/bin/Debug/UnityEngine.Advertisements.dll

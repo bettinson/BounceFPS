@@ -235,6 +235,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             bool waswalking = m_IsWalking;
 
+			if (Input.GetKey (KeyCode.Tab)) {
+				Application.LoadLevel(0);
+			}
+
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running

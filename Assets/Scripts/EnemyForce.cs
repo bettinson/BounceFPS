@@ -14,7 +14,7 @@ public class EnemyForce : MonoBehaviour {
 	void Start () {
 		push = 35;
 		timer = 3;
-		force = new Vector3(0,0,0);
+		force = new Vector3(1,1,1);
 	}
 
 	void Update() {
@@ -31,23 +31,24 @@ public class EnemyForce : MonoBehaviour {
 		GameObject obj = col.gameObject;
 		string tag = col.gameObject.tag;
 
-		Vector3 dirvec = col.relativeVelocity.normalized;
-		
 		if (tag == "Player" || tag == "Ally") {
-			controller = obj.GetComponent<CharacterController>();
+			Vector3 dirvec = col.relativeVelocity.normalized;
+
+			controller = obj.GetComponent<CharacterController> ();
 			//if (push == 35) {
 			//	dirvec *= Math.Max(dirvec.x, Math.Max(dirvec.y, dirvec.z));
 			//}
 			force = dirvec * push * Time.deltaTime * -1;
 			timer = 0;
-			Destroy(GetComponent<Collider>());
-			Destroy(GetComponent<Rigidbody>());
-		}
-		else if (tag != "Ally" && tag != "Player" && tag != "Enemy") {
-			transform.localScale += new Vector3(2f, 2f, 2f);
-			Destroy(GetComponent<Rigidbody>(), 0.5f);
-			Destroy(GetComponent<Collider>(), 0.5f);
-			Destroy(GetComponent<Renderer>(), 0.5f);
+			Destroy (GetComponent<Collider> ());
+			Destroy (GetComponent<Rigidbody> ());
+		} else if (tag != "Ally" && tag != "Player" && tag != "Enemy") {
+			transform.localScale += new Vector3 (2f, 2f, 2f);
+			Destroy (GetComponent<Rigidbody> (), 0.5f);
+			Destroy (GetComponent<Collider> (), 0.5f);
+			Destroy (GetComponent<Renderer> (), 0.5f);
+		} else {
+			print ("WE ARE HITTING: " + tag);
 		}
 		
 	}

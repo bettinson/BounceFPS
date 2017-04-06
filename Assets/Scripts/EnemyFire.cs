@@ -6,6 +6,7 @@ public class EnemyFire : MonoBehaviour {
 	public GameObject rocketPrefab;
 	public Transform rocketSpawn;
 	private float timer;
+	public Rigidbody rb;
 	private AudioSource gunSound;
 
 	// Use this for initialization
@@ -41,15 +42,21 @@ public class EnemyFire : MonoBehaviour {
 
 	void Fire()
 	{
+		print ("Firing");
 		// Create the Bullet from the Bullet Prefab
+		Vector3 additional = new Vector3(1,1,1);
 		var rocket = (GameObject)Instantiate(
 			rocketPrefab,
-			rocketSpawn.position,
+			rocketSpawn.position + additional,
 			rocketSpawn.rotation);
+		
 		rocket.AddComponent<EnemyForce>();
 
 		// Add velocity to the bullet
+//		rocket.GetComponent<Rigidbody>().isKinematic = false;
+		print(rocket.GetComponent<Rigidbody>());
 		rocket.GetComponent<Rigidbody>().velocity = rocket.transform.forward * 50;
+		print (rocket.transform.forward);
 		Destroy(rocket, 2f);
 	}
 }

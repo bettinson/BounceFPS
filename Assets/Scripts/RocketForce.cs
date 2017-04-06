@@ -14,7 +14,7 @@ public class RocketForce : MonoBehaviour {
 	void Start () {
 		push = 35;
 		timer = 3;
-		force = new Vector3(0,0,0);
+		force = new Vector3(1,1,1);
 	}
 
 	void Update() {
@@ -44,8 +44,8 @@ public class RocketForce : MonoBehaviour {
 			Destroy(GetComponent<Rigidbody>());
 		}
 		else if (tag != "Ally" && tag != "Player" && tag != "Enemy") {
-			Destroy(GetComponent<Rigidbody>());
 			transform.localScale += new Vector3(2f, 2f, 2f);
+			Destroy(GetComponent<Rigidbody>());
 			Destroy(GetComponent<Collider>(), 0.5f);
 			Destroy(GetComponent<Renderer>(), 0.5f);
 		}

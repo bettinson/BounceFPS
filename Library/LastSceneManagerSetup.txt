@@ -1,7 +1,10 @@
 sceneSetups:
-- path: Assets/MainCapsuleScene.unity
+- path: Assets/TitleScreen.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/MainCapsuleScene.unity
+  isLoaded: 0
+  isActive: 0
 - path: Assets/Assets2/Minecraft.unity
   isLoaded: 0
   isActive: 0
