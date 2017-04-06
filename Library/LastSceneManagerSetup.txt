@@ -2,3 +2,12 @@ sceneSetups:
 - path: Assets/MainCapsuleScene.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Assets2/Minecraft.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Assets2/MarbleWatchtower.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Assets2/GlitchScene.unity
+  isLoaded: 0
+  isActive: 0
