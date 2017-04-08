@@ -47,9 +47,6 @@ public class EnemyForce : MonoBehaviour {
 			Destroy (GetComponent<Rigidbody> (), 0.5f);
 			Destroy (GetComponent<Collider> (), 0.5f);
 			Destroy (GetComponent<Renderer> (), 0.5f);
-		} else {
-			print ("WE ARE HITTING: " + tag);
 		}
-		
 	}
 }

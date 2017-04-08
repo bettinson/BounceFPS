@@ -42,9 +42,8 @@ public class EnemyFire : MonoBehaviour {
 
 	void Fire()
 	{
-		print ("Firing");
 		// Create the Bullet from the Bullet Prefab
-		Vector3 additional = new Vector3(1,1,1);
+		Vector3 additional = new Vector3(1.5f,0f,1.5f);
 		var rocket = (GameObject)Instantiate(
 			rocketPrefab,
 			rocketSpawn.position + additional,
@@ -54,9 +53,7 @@ public class EnemyFire : MonoBehaviour {
 
 		// Add velocity to the bullet
 //		rocket.GetComponent<Rigidbody>().isKinematic = false;
-		print(rocket.GetComponent<Rigidbody>());
 		rocket.GetComponent<Rigidbody>().velocity = rocket.transform.forward * 50;
-		print (rocket.transform.forward);
 		Destroy(rocket, 2f);
 	}
 }
